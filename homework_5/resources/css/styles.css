@@ -81,7 +81,6 @@
          display:inline-block;
          padding: 16px 40px;
          font-family: apertura, sans-serif;
-         font-display: normal;
          font-weight: 400;
          font-size: 80%;
          font-style: normal;
@@ -105,7 +104,6 @@
         display:inline-block;
         padding: 32px 32px;
         font-family: 'apertura', sans-serif;
-        font-display: normal;
         font-weight: 300;
         font-size: 80%;
         text-decoration: none;
@@ -128,7 +126,6 @@
         display:inline-block;
          padding: 10px 40px;
          font-family: 'apertura', sans-serif; 
-         font-display: normal;
          font-weight: 400;
          font-size: 80%;
          text-decoration: none;
@@ -637,7 +634,6 @@
     font-display: normal;
     font-weight: 400;
     font-size: 80%;
-    font-style: normal;
     text-decoration: none;
     background-color: #4E83E6;
     border-radius: 4px;
@@ -804,7 +800,7 @@
 }
 
 #pab-thumb-left{
-    margin-left: 1000px;
+    margin-left: 160px;
 }
 #pab-thumb-right{
     margin-right: 160px;
