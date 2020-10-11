@@ -783,8 +783,25 @@
     border-top: 1px solid #4E83E6;
 }
 
+#living-thumb-left{
+    margin-left: 160px;
+}
+#living-thumb-right{
+    margin-right: 160px;
+}
 
-
+#floor-thumb-left{
+    margin-left: 160px;
+}
+#floor-thumb-right{
+    margin-right: 160px;
+}
+#round-thumb-left{
+    margin-left: 160px;
+}
+#round-thumb-right{
+    margin-right: 160px;
+}
 
 
 
