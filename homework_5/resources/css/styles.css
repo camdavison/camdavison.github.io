@@ -773,7 +773,7 @@
 .prod-index-hero-content h1{
     color: #fff !important;
     font-weight: 200 !important;
-}
+}   
 
 .living-room-pillows{
     border-top: 1px solid #4E83E6;
@@ -803,11 +803,12 @@
     margin-right: 160px;
 }
 
-#PAB-thumb-left{
-    margin-left: 160px;
+#pab-thumb-left{
+    margin-left: 1000px;
 }
-#PAB-thumb-right{
+#pab-thumb-right{
     margin-right: 160px;
+}
 
 
 
