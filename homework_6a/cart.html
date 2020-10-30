@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head> 
+        <title>Fluff+Stuff Pillows</title>
+        <link rel="stylesheet" href="resources/css/styles.css">
+        <link rel="stylesheet" href="https://use.typekit.net/fxu6zgg.css">
+        <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+        <script type="module" src="https://unpkg.com/ionicons@5.1.2/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule="" src="https://unpkg.com/ionicons@5.1.2/dist/ionicons/ionicons.js"></script>  
+    </head>
+    <body>
+        <div class="top-nav">
+            <div class="logo">
+                <a href="index.html"><img src="resources/img/logo_bright.svg" alt="logo" class="logo"></a>
+            </div>
+            <div class="nav-links">
+                <ul>
+                     <li><a href="product-index.html">Shop</a></li>
+                     <li><a href="#">About</a></li>
+                    <li>
+                        <div class="cart">
+                            <a href="#">
+                                <ion-icon size="large" name="basket-outline"></ion-icon>
+                            </a>
+                            <input type="text" id="cartUpdate" value=""/>
+                        </div>
+                    </li>   
+                    <li>
+                        <a href="#">
+                            <ion-icon size="large" name="person-outline"></ion-icon>
+                        </a>
+                    </li>
+                </ul>
+            </div> 
+        </div>
+        <div class="cart-container">
+            <div id="cart-title">
+                <h2>Items In Your Cart</h2>
+            </div>
+            <div class="cart-item" >
+                <div class="cart-item-img">
+                    <div class="cart-item-image">
+                        <img src="resources/img/knot.svg">
+                    </div>
+                </div>
+                <div class="cart-item-right">
+                    <div class="cart-item-line1">
+                        <div class="cart-item-title">
+                            <h2>Knot Pillow</h2>
+                        </div>
+                        <div class="cart-item-line1-detail">
+                            <div id="item-price">
+                                <p>$88.00</p>
+                            </div>
+                            <div id="item-quant">
+                                <input type="text" class="counter" value="1" readonly/>
+                            </div>
+                            <div id="item-total">
+                                <p>$88.00</p>
+                            </div>
+                        </div>
+                    </div> 
+                    <div class="cart-item-line2">
+                        <div class="cart-item-details">
+                            <p>dwkjdkwndiwjdiwjdijwdijwidw</p>
+                        </div>
+                        <div class="cart-item-edit-delete">
+                            <div id="edit-item">
+                                <a href="#">Edit</a>
+                            </div>
+                            <div id="item-delete">
+                            <a href="#" class="btn-thumb">Delete</a>
+                            </div>
+                        </div>
+                    </div> 
+                </div>
+            </div>
+            <div class="cart-total">
+                <div id="item-total">
+                    <div>
+                        <p>Subtotal</p>
+                    </div>
+                    <div>
+                        <p>Shipping</p>
+                    </div>
+                    <div>
+                        <p>Tax</p>
+                    </div>
+                    <div>
+                        <p>Total</p>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </body>
+</html>
