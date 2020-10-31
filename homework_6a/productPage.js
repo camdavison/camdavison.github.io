@@ -93,6 +93,7 @@ function addToCart() {
   console.log(prodArr);
 
   updateCartNumber(prodArr.length);
+  showCartBtn();
 
 
 }
@@ -106,22 +107,9 @@ function updateCartNumber(num) {
 }
 
 
-
-//page unload or page navigation event in vanilla javascript
-//vanilla javascript alert button events
-function goToCheckoutPage() {
-	//Set the product order in local storage
-	localStorage.setItem('order', JSON.stringify(productArr))
-	
-	var loadedProductArr = localStorage.getItem('order')
-	var productArr2 = JSON.parse(loadedProductArr)
-	
-	//At this point, productArr2 is the same as productArr
-	
-	//load that new HTML page
-	//do stuff with productArr
+function showCartBtn(){
+  document.getElementById('view-cart-btn').style.display = "block";
 }
-
 
 
 

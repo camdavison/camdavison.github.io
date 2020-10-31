@@ -35,34 +35,34 @@
         </div>
         <div class="cart-container">
             <div id="cart-title">
-                <h2>Items In Your Cart</h2>
+                <h4 id="cart-title-header">Items In Your Cart</h4>
             </div>
             <div class="cart-item" >
                 <div class="cart-item-img">
                     <div class="cart-item-image">
-                        <img src="resources/img/knot.svg">
+                        <img class="cart-image" src="resources/img/knot.svg">
                     </div>
                 </div>
                 <div class="cart-item-right">
                     <div class="cart-item-line1">
                         <div class="cart-item-title">
-                            <h2>Knot Pillow</h2>
+                            <h5 id="cart-item-name">Knot Pillow</h5>
                         </div>
                         <div class="cart-item-line1-detail">
                             <div id="item-price">
                                 <p>$88.00</p>
                             </div>
                             <div id="item-quant">
-                                <input type="text" class="counter" value="1" readonly/>
+                                <input type="number" id="item-counter" class="counter" value="1" readonly/>
                             </div>
-                            <div id="item-total">
+                            <div id="item-total-price">
                                 <p>$88.00</p>
                             </div>
                         </div>
                     </div> 
                     <div class="cart-item-line2">
                         <div class="cart-item-details">
-                            <p>dwkjdkwndiwjdiwjdijwdijwidw</p>
+                            <p>Color:Blue<br>Fill: Duck Down<br>Size: small</p>
                         </div>
                         <div class="cart-item-edit-delete">
                             <div id="edit-item">
@@ -77,20 +77,42 @@
             </div>
             <div class="cart-total">
                 <div id="item-total">
-                    <div>
-                        <p>Subtotal</p>
+                    <div id="item-total-line1">
+                        <div>
+                            <p>Subtotal</p>
+                        </div>
+                        <div>
+                            <p>$88.00</p>
+                        </div>
                     </div>
-                    <div>
-                        <p>Shipping</p>
+                    <div id="item-total-line2">
+                        <div>
+                            <p>Shipping</p>
+                        </div>
+                        <div>
+                            <p>FREE</p>
+                        </div>
                     </div>
-                    <div>
-                        <p>Tax</p>
+                    <div id="item-total-line3">
+                        <div>
+                            <p>Tax</p>
+                        </div>
+                        <div>
+                            <p>$12.00</p>
+                        </div>
                     </div>
-                    <div>
-                        <p>Total</p>
-                    </div>
-                </div>
-                
+                    <div id="item-total-line4">
+                        <div>
+                            <p>TOTAL</p>
+                        </div>
+                        <div>
+                            <p>$100</p>
+                        </div>
+                    </div> 
+                </div> 
+            </div>
+            <div class="cart-cta">
+                <a href="#" class="btn-prod" >CONTINUE</a>
             </div>
         </div>
     </body>
