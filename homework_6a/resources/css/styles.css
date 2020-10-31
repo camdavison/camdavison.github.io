@@ -232,7 +232,6 @@
 }
 
 #cartUpdate{
-    font-size: %;
     text-align: center;
     font-weight: 700;
     color: #4E83E6;
@@ -727,7 +726,6 @@
     display:inline-block;
     padding: 20px 112px;
     font-family: apertura, sans-serif;
-    font-display: normal;
     font-weight: 400;
     font-size: 80%;
     text-decoration: none;
@@ -1016,7 +1014,6 @@
 
 .cart-item-edit-delete{
     display: flex;
-    justify-self: row;
 }
 
 #edit-item{
