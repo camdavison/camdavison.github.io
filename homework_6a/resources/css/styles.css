@@ -925,6 +925,9 @@
     margin-right: 24px;
 }
 
+#keep-shopping{
+    font-size: 80%;
+}
 #cart-title-header{
     margin-bottom: 16px;
 }
@@ -989,9 +992,12 @@
 }
 
 #item-quant{
-    margin-right: 160px;
+    margin-right: 64px;
     text-align: center;
+}
 
+#item-quant-input{
+   text-align: ;
 }
 
 #item-total-price{
