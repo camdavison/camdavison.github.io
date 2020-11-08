@@ -5,13 +5,16 @@ var prodArr = []
 class Product {
 	
 	
-	constructor(quantity, color, fill, size) {
+	constructor(quantity, color, fill, size,total) {
     this.quantity = quantity
     this.color = color
 		this.fill = fill
-		this.size = size
+    this.size = size
+    this.total = preTotal
 	}
 }
+
+let preTotal = 88;
 
 
 // The following 2 functions control the +/- increments for th equantity counter
@@ -20,7 +23,9 @@ function incrementUp() {
   console.log('test')
   var quantValue = parseInt(document.getElementById('counterInput').value, 10);
   quantValue++;
+  preTotal = preTotal + 88
   document.getElementById('counterInput').value = quantValue;
+  console.log(preTotal)
   
 }
 
@@ -29,6 +34,7 @@ function incrementDown() {
   var quantValue = parseInt(document.getElementById('counterInput').value, 10);
   if (quantValue > 1) {
     quantValue--;
+    preTotal = preTotal - 88
     document.getElementById('counterInput').value = quantValue;
   }
 }
@@ -58,11 +64,14 @@ function addToCart() {
       console.log(colorSelected);
     }
   }
+
+  //grab the fill
   var fill = document.getElementById('fillValue').value;
   console.log(fill);
-
+  //grab the size
   var size = document.getElementById('sizeValue').value;
   console.log(size);
+
 // grabbing the quantity value
   var quantInput= document.getElementById('counterInput').value;
   console.log('quantity input value');
@@ -72,27 +81,19 @@ function addToCart() {
   console.log('quantity float');
   console.log(quantity);
 
-  for(var i = 1; i < quantity; i++) {
-    var pillow = new Product(quantity, colorSelected, fill, size);
-    console.log(pillow);
+  console.log('this is the preTotal' + preTotal)
 
-    prodArr.push(pillow); 
-
-    console.log('heres the prodArr');
-    console.log(prodArr);
-  } 
-
-
-
-  var pillow = new Product(quantity, colorSelected, fill, size);
+  
+  var pillow = new Product(quantity, colorSelected, fill, size, preTotal);
   console.log(pillow);
 
   prodArr.push(pillow); 
 
   console.log('heres the prodArr');
   console.log(prodArr);
-
+  
   updateCartNumber(prodArr.length);
+  showCartBtn();
 
 
 }
@@ -105,25 +106,54 @@ function updateCartNumber(num) {
   console.log(num);
 }
 
+//This function displays the go to cart button after user has seelcted their product and
+//clicked on add to cart.
+function showCartBtn(){
+  document.getElementById('view-cart-btn').style.display = "block";
+}
 
+//saving cart in local storage
 
-//page unload or page navigation event in vanilla javascript
-//vanilla javascript alert button events
-function goToCheckoutPage() {
-	//Set the product order in local storage
-	localStorage.setItem('order', JSON.stringify(productArr))
-	
-	var loadedProductArr = localStorage.getItem('order')
-	var productArr2 = JSON.parse(loadedProductArr)
-	
-	//At this point, productArr2 is the same as productArr
-	
-	//load that new HTML page
-	//do stuff with productArr
+function sendToCart(){
+  alert('you clicked go to cart');
+
+  localStorage.setItem('userOrder', JSON.stringify(prodArr))
 }
 
 
+//Loading ProdArr into checkout page
 
+function cartLoad() {
+	
+	var loadedProductArr = localStorage.getItem('userOrder')
+	prodArrParse = JSON.parse(loadedProductArr)
+  
+  //birngs back prodArr that we saved from Product Page 
+	
+	console.log('we are on checkout page')
+	console.log(prodArrParse)
+	
+	/*var listOfProducts = document.getElementById('listOfProducts')
+	
+	for(var i = 0; i < productArr2.length; i++) {
+	   var flower = productArr2[i]
+	   var flowerType = flower.type
+	   var flowerColor = flower.color
+	   var flowerThorns = flower.thorns
+	   if (flowerType == 'rose') {
+		listOfProducts.innerHTML += '<div class="roses">Type: ' + flowerType + ' Color: ' + flowerColor + ' Thorns: ' + flowerThorns + '</div>'
+		listOfProducts.innerHTML += '<span onclick="deleteProduct(' + i + ')">[click to delete]</span>'
+		listOfProducts.innerHTML += '<br /><br /><br />'
+	   }
+	   else {
+		listOfProducts.innerHTML += '<div onclick="wow()">Type: ' + flowerType + ' Color: ' + flowerColor + ' Thorns: ' + flowerThorns + '</div>'
+		listOfProducts.innerHTML += '<span onclick="deleteProduct(' + i + ')">[click to delete]</span>'
+		listOfProducts.innerHTML += '<br /><br /><br />'
+	   }
+	   
+	   
+	}*/
+}
 
 
 

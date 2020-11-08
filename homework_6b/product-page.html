@@ -21,10 +21,10 @@
                      <li><a href="#">About</a></li>
                     <li>
                         <div class="cart">
-                            <a href="#">
-                                <ion-icon size="large" name="basket-outline"></ion-icon>
+                            <a href="cart.html" onclick="sendToCart()">
+                                <ion-icon  size="large" name="basket-outline" ></ion-icon>
                             </a>
-                            <input type="text" id="cartUpdate" value="" readonly onload="cartCountUpdate()"/>
+                            <input type="text" id="cartUpdate" value="" readonly />
                         </div>
                     </li>   
                     <li>
@@ -41,13 +41,13 @@
 
         <div class="wayfinding">
             <div class="way-finding-txt">
-                <a href="#">Home</a>
+                <a href="index.html">Home</a>
             </div>
             <div class="way-finding-txt">
                 <p>></p>
             </div>
             <div class="way-finding-txt">
-                <a href="#">Livingroom</a>
+                <a href="product-index.html">Livingroom</a>
             </div>
             <div class="way-finding-txt">
                 <p>></p>
@@ -86,7 +86,7 @@
 
             <div class="prod-page-right">
                 <div class="prod-name-rating">
-                    <h4>The Knot Pillow</h4>
+                    <h4 id="knot" value="'The Knot Pillow'">The Knot Pillow</h4>
                     <div class="rating-img">
                         <div id="star">
                             <img src="resources/img/Prod/Product/Star1.svg" alt="star">
@@ -134,13 +134,13 @@
                             
                         </div> --->
 
-                        <input type="radio" class="colorRadio" id="red" name="colorSelect" value="red">
+                        <input type="radio" class="colorRadio" id="red" name="colorSelect" value="Red">
                         <label for="red">Red</label>
-                        <input type="radio" class="colorRadio" id="green" name="colorSelect"value="green">
+                        <input type="radio" class="colorRadio" id="green" name="colorSelect"value="Green">
                         <label for="green">Green</label>
-                        <input type="radio" class="colorRadio" id="blue" name="colorSelect" value="blue">
+                        <input type="radio" class="colorRadio" id="blue" name="colorSelect" value="Blue">
                         <label for="blue">Blue</label>
-                        <input type="radio" class="colorRadio" id="grey" name="colorSelect" value="grey">
+                        <input type="radio" class="colorRadio" id="grey" name="colorSelect" value="Grey">
                         <label for="grey">Grey</label>
                     </div>
                 </div>
@@ -150,9 +150,9 @@
                 <div class="fill-select">
                     <div class="select-box" id="prod-fill-select" >
                         <select id="fillValue">
-                             <option value="duckDown">Duck Down</option>
-                            <option value="poly">Hypo-allergenc Poly-blend</option>
-                            <option value="memory">Memory Foam</option>
+                             <option value="Duck Down">Duck Down</option>
+                            <option value="Hypo-allergenc Poly-blend">Hypo-allergenc Poly-blend</option>
+                            <option value="Memory Foam">Memory Foam</option>
                         </select>
                     </div>
                     
@@ -182,14 +182,14 @@
                     <p id="ship-copy">Ready to ship in 2 days</p>
                     <a href="#" class="btn-prod" onclick="addToCart()">ADD TO CART</a>
                 </div>
-                <div class="prod-btn">
-                    <a href="checkout.html" class="btn-prod">CHECKOUT</a>
+                <div class="prod-btn" id="view-cart-btn" style="display: none;">
+                    <a href="cart.html" class="btn-prod" onclick="sendToCart()">VIEW CART</a>
                 </div>
                 
 
                 
             </div>
-        </div>
+        </div>  
 
         <!-- PROD INFO SECTION -->
 
