@@ -104,6 +104,11 @@ function updateCartNumber(num) {
   cartCount.value = num;
   console.log('This is num');
   console.log(num);
+  if (num == undefined){
+    cartCount.style.display="none"
+
+  }
+
 }
 
 //This function displays the go to cart button after user has seelcted their product and
@@ -115,45 +120,11 @@ function showCartBtn(){
 //saving cart in local storage
 
 function sendToStore(){
-  alert('you clicked go to cart');
+  //alert('you clicked go to cart');
 
   localStorage.setItem('userOrder', JSON.stringify(prodArr))
 }
 
-
-//Loading ProdArr into checkout page
-
-function cartLoad() {
-	
-	var loadedProductArr = localStorage.getItem('userOrder')
-	prodArrParse = JSON.parse(loadedProductArr)
-  
-  //birngs back prodArr that we saved from Product Page 
-	
-	console.log('we are on checkout page')
-	console.log(prodArrParse)
-	
-	/*var listOfProducts = document.getElementById('listOfProducts')
-	
-	for(var i = 0; i < productArr2.length; i++) {
-	   var flower = productArr2[i]
-	   var flowerType = flower.type
-	   var flowerColor = flower.color
-	   var flowerThorns = flower.thorns
-	   if (flowerType == 'rose') {
-		listOfProducts.innerHTML += '<div class="roses">Type: ' + flowerType + ' Color: ' + flowerColor + ' Thorns: ' + flowerThorns + '</div>'
-		listOfProducts.innerHTML += '<span onclick="deleteProduct(' + i + ')">[click to delete]</span>'
-		listOfProducts.innerHTML += '<br /><br /><br />'
-	   }
-	   else {
-		listOfProducts.innerHTML += '<div onclick="wow()">Type: ' + flowerType + ' Color: ' + flowerColor + ' Thorns: ' + flowerThorns + '</div>'
-		listOfProducts.innerHTML += '<span onclick="deleteProduct(' + i + ')">[click to delete]</span>'
-		listOfProducts.innerHTML += '<br /><br /><br />'
-	   }
-	   
-	   
-	}*/
-}
 
 
 

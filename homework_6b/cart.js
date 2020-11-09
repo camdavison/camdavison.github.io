@@ -16,7 +16,7 @@ function cartLoad() {
         var color = pillow.color;
         var fill = pillow.fill;
         var size = pillow.size;
-        var total = pillow.total;
+        var total = pillow.total;   
         subTotal = total + subTotal;
         
         cartContainer.innerHTML += '<div class="cart-item"><div class="cart-item-img"><div class="cart-item-image"> <img class="cart-image" src="resources/img/knot.svg"> </div></div> <div class="cart-item-right"><div class="cart-item-line1"><div class="cart-item-title"><h5 id="cart-item-name">Knot Pillow</h5></div><div class="cart-item-line1-detail"><div id="item-price"><p>$88.00</p></div><div id="item-quant"><img id="minus" src="resources/img/Prod/Product/minus.svg" alt="minus"><input type="text" class="counter" id="item-quant-input" value=' + quantity + ' readonly/><img id="plus" src="resources/img/Prod/Product/plus.svg" alt="plus"></div><div id="item-total-price"><p>$' +total +'.00</p></div></div></div><div class="cart-item-line2"><div class="cart-item-details"><p>Color:  ' + color + '<br>Fill: ' + fill +' <br>Size:  '+ size +'</p></div><div class="cart-item-edit-delete"><div id="item-delete"><a href="#" class="btn-thumb" onclick="deleteProduct(' + i + ')">Delete</a></div></div></div></div>'
@@ -33,11 +33,10 @@ function cartLoad() {
 }
 
 function deleteProduct(i) {
-	alert('i : ' + i)
 	console.log('before we delete')
 	console.log(prodArrParse)
 	
-	//Remove this product object from our productArr2 
+	//Remove object from prodArrParse
     prodArrParse.splice(i,1)
     localStorage.setItem('userOrder', JSON.stringify(prodArrParse))
 	
@@ -67,7 +66,7 @@ function deleteProduct(i) {
             document.getElementById('tax-line').innerHTML = '$.00'; 
             
         }
-
+        updateCartNumber(quantity);
         window.location.reload(true);
     }
     
@@ -76,5 +75,7 @@ function deleteProduct(i) {
       cartCount.value = num;
       console.log('This is num');
       console.log(num);
+      if (num == undefined){
+        cartCount.style.display="none"
+        }
     }
-
