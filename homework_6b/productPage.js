@@ -92,7 +92,7 @@ function addToCart() {
   console.log('heres the prodArr');
   console.log(prodArr);
   
-  updateCartNumber(prodArr.length);
+  updateCartNumber(quantity);
   showCartBtn();
 
 
@@ -114,7 +114,7 @@ function showCartBtn(){
 
 //saving cart in local storage
 
-function sendToCart(){
+function sendToStore(){
   alert('you clicked go to cart');
 
   localStorage.setItem('userOrder', JSON.stringify(prodArr))

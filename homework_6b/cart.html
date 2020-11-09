@@ -8,7 +8,7 @@
         <script type="module" src="https://unpkg.com/ionicons@5.1.2/dist/ionicons/ionicons.esm.js"></script>
         <script nomodule="" src="https://unpkg.com/ionicons@5.1.2/dist/ionicons/ionicons.js"></script>  
     </head>
-    <body onload="cartLoad()">
+    <body onload="cartLoad()" onunload="sendToStore()">
         <div class="top-nav">
             <div class="logo">
                 <a href="index.html"><img src="resources/img/logo_bright.svg" alt="logo" class="logo"></a>

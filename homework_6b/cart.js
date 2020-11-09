@@ -29,7 +29,7 @@ function cartLoad() {
     var finalTotal = subTotal + 12;
     document.getElementById('final-total').innerHTML = '$' + finalTotal + '.00';
 
-    updateCartNumber(prodArrParse.length)
+    updateCartNumber(quantity)
 }
 
 function deleteProduct(i) {
@@ -77,3 +77,4 @@ function deleteProduct(i) {
       console.log('This is num');
       console.log(num);
     }
+
