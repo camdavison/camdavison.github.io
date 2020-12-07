@@ -1,0 +1,21 @@
+ 
+ 
+ /* ---- BASIC SETUP ---- */
+ html,
+ body {
+ background-color: #000000;
+ color: #CFD0D6;
+ font-family: 'Inter', sans-serif;
+ font-weight: 300;
+ font-size: 20px;
+ width: auto;
+ }
+
+ a{
+     text-decoration: none;
+     color: CFD0D6;
+ }
+
+ ul{
+     list-style-type: none;
+ }

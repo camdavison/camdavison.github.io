@@ -1,0 +1,56 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creative Cap</title>
+    <script src="jquery-3.5.1.min.js"></script>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body class="bg-black">
+    <div> <!--content wrapper-->
+        <div> <!--start nav-->
+            <nav>
+                <ul>
+                    <li>
+                        <a href="#">
+                            <span class="text-primary-200">About</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span class="text-primary-200">Play</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div><!--end nav-->
+
+        <main>
+            <div id="logo" class="mt-16 ml-28">
+                <a href="game-active.html">
+                    <img src="img/Logo.svg" alt="creative cap logo" href="game-active.html" class="w-24 h-24">
+                </a>
+            </div>
+            <div class="flex">
+                <div class="my-20 ml-28">
+                    <h1 class="text-6xl text-primary-100 font-main font-    bold " id="header">
+                        Creative Cap
+                    </h1>
+                </div>
+                <div class="my-20 ml-20 mr-20 w-96">
+                    <span class="text-primary-200 text-lg font-light">Test your creative writing by completing as many captions as you can in 2 minutes. The more unique the better!</span>
+                </div>
+            </div>
+            <div class="flex">
+                <div id="game-square" class="h-72 w-72 bg-gray-900 border-t-2 border-primary-300 ml-28">
+                </div>
+                <div>
+                    <a href="game-active.html"><button class="w-72 h-16 text-white  bg-gray-900 border-t-2 border-primary-300 mt-20 ml-40" id="playBtn" href="game-active.html" onclick="gameStart()">PLAY</button></a>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+</html>

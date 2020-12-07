@@ -1,0 +1,69 @@
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Creative Cap</title>
+        <link rel="stylesheet" href="styles.css">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;600;700;800;900&display=swap" rel="stylesheet">
+        
+    </head>
+    <body class="bg-black" >
+        <div> <!--content wrapper-->
+            <div> <!--start nav-->
+                <nav>
+                    <ul>
+                        <li>
+                            <a href="#">
+                                <span class="text-primary-200">About</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span class="text-primary-200">Play</span>
+                            </a>
+                            </li>
+                    </ul>
+                </nav>
+            </div><!--end nav-->
+
+            <main>
+                <div id="logo" class="mt-16 ml-28">
+                    <img src="img/Logo.svg" alt="creative cap logo" class="w-24 h-24">
+                </div>
+                <div class="flex">
+                    <div class="my-20 ml-28">
+                        <h1 class="text-6xl text-primary-100 font-main font-    bold"  id="header">
+                            Creative Cap
+                        </h1>
+                    </div>
+                    <div class="my-20 ml-20 mr-20 w-96">
+                        <span class="text-primary-200 text-lg font-light">Test your creative writing by completing as many captions as you can in 2 minutes. The more unique the better!</span>
+                    </div>
+                </div>
+
+                <div class="flex"> <!--game wrapper-->
+                    <div id="game-square" onclick="test()" class="h-72 w-72 bg-gray-900 border-t-2 border-primary-300 ml-28 mr-40">
+                        <img id="imageToDisplay" src="">
+                    </div> 
+                    <div><!--timer, input, button wrapper-->
+                        <div id="timer" class="text-primary-200"> <!--timer-->
+                        Time left = <span id="timer">2:00</span>
+                        </div>
+                       
+                        <div class="mb-3 pt-0" id="user-input">
+                         <input type="text" placeholder="Write caption here" class="w-96 h-40 px-3 py-3 placeholder-gray-400 text-gray-700 relative bg-white bg-white rounded text-sm border border-gray-400 outline-none focus:outline-none focus:shadow-outline w-full"/>
+                        </div>
+                        <div id="button"><!--button-->
+                            <button class="w-72 h-16 text-white  bg-gray-900 border-t-2 border-primary-300" id="getImagesBtn" onclick="gameStart()">NEXT IMAGE</button>
+                        </div> 
+                    </div>
+                </div>
+            </main>
+        </div>
+           
+            
+        
+        <script type="text/javascript" src="game.js"></script>
+    </body>
+</html>
