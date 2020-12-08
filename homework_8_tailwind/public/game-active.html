@@ -33,7 +33,7 @@
                 </div>
                 <div class="flex">
                     <div class="my-20 ml-28">
-                        <h1 class="text-6xl text-primary-100 font-main font-    bold"  id="header">
+                        <h1 class="text-6xl text-primary-100 font-main font-bold"  id="header">
                             Creative Cap
                         </h1>
                     </div>
@@ -45,18 +45,20 @@
                 <div class="flex"> <!--game wrapper-->
                     <div id="game-square" onclick="test()" class="h-72 w-72 bg-gray-900 border-t-2 border-primary-300 ml-28 mr-40">
                         <img id="imageToDisplay" src="">
-                    </div> 
-                    <div><!--timer, input, button wrapper-->
-                        <div id="timer" class="text-primary-200 text-6xl ml-24 mb-10"> <!--timer-->
-                        Time left = <span id="timer">2:00</span>
+                    </div>
+                    <div class="flex"> 
+                        <div><!--timer, input, button wrapper-->
+                            <div id="timer" class="text-primary-200 text-6xl ml-24 mb-10"> <!--timer-->
+                            Time left = <span id="timer">2:00</span>
+                            </div>
+                        
+                            <div class="mb-3 pt-0" id="user-input">
+                            <input type="text" id="captionTxt" placeholder="Write caption here" class="w-96 h-40 px-3 py-3 placeholder-gray-400 text-gray-700 relative bg-white bg-white rounded text-sm border border-gray-400 outline-none focus:outline-none focus:shadow-outline w-full"/>
+                            </div>
+                            <div id="button"><!--button-->
+                                <button class="w-72 h-16 text-white  bg-gray-900 border-t-2 border-primary-300" id="getImagesBtn" onclick="addCaption()">NEXT IMAGE</button>
+                            </div> 
                         </div>
-                       
-                        <div class="mb-3 pt-0" id="user-input">
-                         <input type="text" placeholder="Write caption here" class="w-96 h-40 px-3 py-3 placeholder-gray-400 text-gray-700 relative bg-white bg-white rounded text-sm border border-gray-400 outline-none focus:outline-none focus:shadow-outline w-full"/>
-                        </div>
-                        <div id="button"><!--button-->
-                            <button class="w-72 h-16 text-white  bg-gray-900 border-t-2 border-primary-300" id="getImagesBtn" onclick="gameStart()">NEXT IMAGE</button>
-                        </div> 
                     </div>
                 </div>
             </main>

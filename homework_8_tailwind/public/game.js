@@ -1,6 +1,56 @@
 
+var gameArr = []
+
+//This is going to be a caption class
+class Caption {
+	
+	
+	constructor(img, caption) {
+    this.img = img
+    this.caption = caption
+
+	}
+}
+
+//Creating caption object and sending to array
+
+function addCaption() {
+    gameStart()
+    //getcaption
+    var cap = document.getElementById('captionTxt').value;
+    console.log('cap');
+    
+    //get image
+    var pic = document.getElementById('imageToDisplay').src; 
+    console.log('pic');
+  
+    var caption = new Caption(pic, cap);
+    console.log(caption);
+  
+    gameArr.push(caption); 
+  
+    console.log('heres the gameArr');
+    console.log(gameArr);
+
+    document.getElementById('captionTxt').value = ""
+    
+  }
+
+  // sending array to local storage
+
+function storeCap(){
+  
+    localStorage.setItem('captions', JSON.stringify(gameArr))
+    alert('yall stored yo captions')
+  }
+
+
+
+
+//TIMER//
+
 document.getElementById('timer').innerHTML =
-   002 + ":" +00;
+   000 + ":" +20;
 startTimer();
 
 function startTimer() {
@@ -9,12 +59,16 @@ function startTimer() {
   var m = timeArray[0];
   var s = checkSecond((timeArray[1] - 1));
   if(s==59){m=m-1}
-  //if(m<0){alert('timer completed')}
+  
   
   document.getElementById('timer').innerHTML =
     m + ":" + s;
 //   console.log(m)
   setTimeout(startTimer, 1000);
+  if(m<0){
+    document.getElementById('timer').innerHTML = 000 +":" +00;
+    gameOver()
+    }
 }
 
 function checkSecond(sec) {
@@ -28,12 +82,16 @@ function getRanNum(){
     console.log(x);
     return x;
     }
+
 function gameStart() {
     // document.getElementById('imageToDisplay').src = "https://source.unsplash.com/collection/466697/${getRanNum()}";
     document.getElementById('imageToDisplay').src = "https://source.unsplash.com/collection/778914/" + getRanNum();
 }
 
-
+function gameOver(){
+    storeCap()
+    location.href ='captionDisplay.html'
+}
 
 // function getImage(){
 

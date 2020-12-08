@@ -11,6 +11,10 @@ Document
 Use a better box model (opinionated).
 */
 
+#button2{
+  display:none;
+}
+
 *,
 *::before,
 *::after {
