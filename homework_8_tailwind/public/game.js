@@ -50,7 +50,7 @@ function storeCap(){
 //TIMER//
 
 document.getElementById('timer').innerHTML =
-   000 + ":" +20;
+   002 + ":" +00;
 startTimer();
 
 function startTimer() {
