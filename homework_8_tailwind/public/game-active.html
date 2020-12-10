@@ -10,45 +10,47 @@
     </head>
     <body class="bg-black" onload="gameStart()">
         <div> <!--content wrapper-->
-            <div> <!--start nav-->
+            <div class="mr-8 ml-8"> <!--start nav-->
                 <nav>
                     <ul>
                         <li>
                             <a href="index.html">
-                                <span class="text-primary-200">About</span>
+                                <span  class="text-primary-200">About</span>
                             </a>
                         </li>
                         <li>
                             <a href="#">
                                 <span class="text-primary-200">Play</span>
                             </a>
-                            </li>
+                        </li>
                     </ul>
                 </nav>
             </div><!--end nav-->
-
-            <main>
-                <div id="logo" class="mt-16 ml-28">
-                    <img src="img/Logo.svg" alt="creative cap logo" class="w-24 h-24">
+    
+            <main class="mr-8 ml-8 md:mr-20 md:ml-20">
+                <div id="logo" class="">
+                    <a href="game-active.html" class="">
+                        <img src="img/Logo.svg" alt="creative cap logo" href="game-active.html" class="  w-16 h-16 md:w-24 md:h-24">
+                    </a>
                 </div>
-                <div class="flex">
-                    <div class="my-20 ml-28">
-                        <h1 class="text-6xl text-primary-100 font-main font-bold"  id="header">
+                <div class="md:flex">   
+                    <div class="md:flex-none">
+                        <h1 class="text-4xl text-primary-100 mt-8 mb-8 font-main font-bold md:text-5xl md:mt-20" id="header">
                             Creative Cap
-                        </h1>
+                        </h1>   
                     </div>
-                    <div class="my-20 ml-20 mr-20 w-96">
-                        <span class="text-primary-200 text-lg font-light">Test your creative writing by completing as many captions as you can in 2 minutes. The more unique the better!</span>
+                    <div style="width: 320px" class="  mb-8 w-auto md:flex-none md:ml-52 md:mt-20">
+                        <p class="text-primary-200 text-lg font-light">Test your creative writing by completing as many captions as you can in 2 minutes. The more unique the better!</p>
                     </div>
                 </div>
 
-                <div class="flex"> <!--game wrapper-->
-                    <div id="game-square" onclick="test()" class="h-72 w-72 bg-gray-900 border-t-2 border-primary-300 ml-28 mr-40">
-                        <img id="imageToDisplay" src="">
+                <div class="md:flex"> <!--game wrapper-->
+                    <div id="game-square" class="flex-none h-72 w-72 bg-gray-900 border-t-2 border-primary-300">
+                        <img class="object-cover h-72 w-72"id="imageToDisplay" src="">
                     </div>
-                    <div class="flex"> 
+                    <div class="flex md:ml-52"> 
                         <div><!--timer, input, button wrapper-->
-                            <div id="timer" class="text-primary-200 text-6xl ml-24 mb-10"> <!--timer-->
+                            <div id="timer" class="text-primary-200 text-6xl"> <!--timer-->
                             Time left = <span id="timer">2:00</span>
                             </div>
                         
