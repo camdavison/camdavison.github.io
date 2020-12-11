@@ -12,45 +12,74 @@ class Caption {
 	}
 }
 
-//Creating caption object and sending to array
+// Starts game by generating a random image
+
+function gameStart() {
+    // document.getElementById('imageToDisplay').src = "https://source.unsplash.com/collection/466697/${getRanNum()}";
+    document.getElementById('imageToDisplay').src = "https://source.unsplash.com/collection/778914/" + getRanNum();
+}
+
+// triggers the local storage function
+
+function gameOver(){
+    storeCap()
+    location.href ='captionDisplay.html'
+}
+
+// send array to local storage
+
+function storeCap(){
+  
+    localStorage.setItem('captions', JSON.stringify(gameArr))
+  }
+
+//Creating caption object, sending to array + clearing the input field
 
 function addCaption() {
+    
+    //generate new random image
+
     gameStart()
-    //getcaption
+    
+    //go get the caption
+
     var cap = document.getElementById('captionTxt').value;
     console.log('cap');
     
-    //get image
+    //get the image
+
     var pic = document.getElementById('imageToDisplay').src; 
     console.log('pic');
   
-    var caption = new Caption(pic, cap);
-    console.log(caption);
-  
-    gameArr.push(caption); 
+    //create object with cap + image
+
+    var imgCap = new Caption(pic, cap);
+    console.log(imgCap);
+    
+    //push it into the array
+
+    gameArr.push(imgCap); 
   
     console.log('heres the gameArr');
     console.log(gameArr);
+
+    //clear the input for the next caption
 
     document.getElementById('captionTxt').value = ""
     
   }
 
-  // sending array to local storage
-
-function storeCap(){
-  
-    localStorage.setItem('captions', JSON.stringify(gameArr))
-    alert('yall stored yo captions')
-  }
 
 
 
 
-//TIMER//
+
+// Timer
 
 document.getElementById('timer').innerHTML =
-   002 + ":" +00;
+  //sets timer amount
+   00 + ":" +20;
+  //auto -starts timer
 startTimer();
 
 function startTimer() {
@@ -70,54 +99,22 @@ function startTimer() {
     gameOver()
     }
 }
-
+// Adding a zero beofre the second if it's less than 10!!!!
 function checkSecond(sec) {
-  if (sec < 10 && sec >= 0) {sec = "0" + sec}; // add zero in front of numbers < 10
+  if (sec < 10 && sec >= 0) {sec = "0" + sec}; 
   if (sec < 0) {sec = "59"};
   return sec;
 }  
 
+// Generates random number to append to the image collection URL to generate random image
 function getRanNum(){
     var x = Math.floor(Math.random() * 99);
     console.log(x);
     return x;
     }
 
-function gameStart() {
-    // document.getElementById('imageToDisplay').src = "https://source.unsplash.com/collection/466697/${getRanNum()}";
-    document.getElementById('imageToDisplay').src = "https://source.unsplash.com/collection/778914/" + getRanNum();
-}
-
-function gameOver(){
-    storeCap()
-    location.href ='captionDisplay.html'
-}
-
-// function getImage(){
-
-// }
-
-// const requestUrl = 'https://source.unsplash.com/random';
-// const getImagesButton = document.getElementById('getImagesBtn');
-// const imageToDisplay = document.getElementById('imageToDisplay');;
-
-//     getImagesButton.addEventListener('click', /*async () => */{
-//       let randomImage = await getNewImage();
-//       imageToDisplay.src = randomImage;
-//     }); 
-
-//     async function getNewImage() {
-//       let randomNumber = Math.floor(Math.random() * 10);
-//       return fetch(requestUrl)
-//         .then((response) => response.json())
-//         .then((data) => {
-//           let allImages = data.results[randomNumber];
-//           return allImages.urls.regular;
-//         });
-//     }
 
 
 
-// function test(){
-//     document.getElementById('game-square').innerHTML = 'TEST TEST TEST'
-// }
+
+

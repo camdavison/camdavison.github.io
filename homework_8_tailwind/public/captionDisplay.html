@@ -9,12 +9,12 @@
 </head>
 <body class="bg-black" onload="capLoad()">
     <div> <!--content wrapper-->
-        <div> <!--start nav-->
+        <div class="mr-8 ml-8"> <!--start nav-->
             <nav>
                 <ul>
                     <li>
                         <a href="index.html">
-                            <span class="text-primary-200">About</span>
+                            <span  class="text-primary-200">About</span>
                         </a>
                     </li>
                     <li>
@@ -26,29 +26,37 @@
             </nav>
         </div><!--end nav-->
 
-        <main>
-            <div id="logo" class="mt-16 ml-28">
+        <main class="mr-8 ml-8 md:mr-20 md:ml-20">
+            <div id="logo" class="">
                 <a href="game-active.html">
-                    <img src="img/Logo.svg" alt="creative cap logo" href="game-active.html" class="w-24 h-24">
+                    <img src="img/Logo.svg" alt="creative cap logo" href="game-active.html" class="w-16 h-16 md:w-24 md:h-24">
                 </a>
             </div>
-            <div>
-                <div class="my-10 ml-28">
-                    <h1 class="text-6xl text-primary-100 font-main font-bold " id="header">
+            <div>   
+                <div class="md:flex-none">
+                    <h1 class="text-4xl text-primary-100 mt-8 mb-8 font-main font-bold md:text-5xl md:mt-20" id="header">
                         Creative Cap
-                    </h1>
+                    </h1>   
+                </div>
+                <div style="width: 320px" class="  mb-8 w-auto md:flex-none md:ml-52 md:mt-20">
+                    <p class="text-primary-200 text-3xl font-light">Check out your amazing work! </p>
                 </div>
             </div>
-            <div class="my-10 ml-28  ">
-                <span class="text-primary-200 text-lg font-light text-4xl">Test your creative writing by completing as many captions as you can in 2 minutes. The more unique the better!</span>
-            </div>
-            <div class="flex">
-                <div id="game-square" class="h-72 w-72 bg-gray-900 border-t-2 border-primary-300 ml-28">
+           <div id="caption-conatiner">
+                <!-- <div id="image-div" class="flex-none h-72 w-72 bg-gray-900 border-t-2 border-primary-300">
+                    <img class="object-cover h-72 w-72"id="imageToDisplay" src="">
                 </div>
-                <div>
-                    <a href="#"><button class="w-72 h-16 text-white  bg-gray-900 border-t-2 border-primary-300 mt-20 ml-40" id="playBtn" href="game-active.html" onclick="getRanNum()">PLAY</button></a>
-                </div>
-            </div>
+                <div id="caption" class=" mb-8 h-24 w-72 bg-gray-900 mt-4 rounded-md">
+                    <div>
+                        <img src="#" alt="quotes">
+                    </div>
+                    <div>
+                        <p>
+                            
+                        </p>
+                    </div>
+                </div>-->
+            </div> 
         </main>
     </div>
     <script type="text/javascript" src="captionDisplay.js"></script>
