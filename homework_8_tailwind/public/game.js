@@ -15,8 +15,8 @@ class Caption {
 // Starts game by generating a random image
 
 function gameStart() {
-    // document.getElementById('imageToDisplay').src = "https://source.unsplash.com/collection/466697/${getRanNum()}";
-     document.getElementById('imageToDisplay').src = "https://source.unsplash.com/collection/778914/" + getRanNum();
+    // document.getElementById('imageToDisplay').src = "https://source.unsplash.com/collection/466697/${getRanNum()}";document.getElementById('imageToDisplay').src = "https://source.unsplash.com/collection/778914/" + getRanNum();
+     document.getElementById('imageToDisplay').src = "https://picsum.photos/id/"+getRanNum()+"/200/300";
     // var imgUrl = "https://source.unsplash.com/collection/778914/" + getRanNum();
     // document.getElementById('imageToDisplay').src = imgUrl;
 }
@@ -39,10 +39,6 @@ function storeCap(){
 
 function addCaption() {
     
-    //generate new random image
-
-    gameStart()
-    
     //go get the caption
 
     var cap = document.getElementById('captionTxt').value;
@@ -50,8 +46,10 @@ function addCaption() {
     
     //get the image
 
+    // var pic = document.getElementById('imageToDisplay');
+    // imgData = getBase64Image(pic);
     var pic = document.getElementById('imageToDisplay').src; 
-    console.log('pic');
+    // console.log('pic');
   
     //create object with cap + image
 
@@ -68,10 +66,25 @@ function addCaption() {
     //clear the input for the next caption
 
     document.getElementById('captionTxt').value = ""
+    //generate new random image
+
+    gameStart()
     
   }
 
+  
+  function getBase64Image(img) {
+    var canvas = document.createElement("canvas");
+    canvas.width = img.width;
+    canvas.height = img.height;
 
+    var ctx = canvas.getContext("2d");
+    ctx.drawImage(img, 0, 0);
+
+    var dataURL = canvas.toDataURL("image/png");
+
+    return dataURL.replace(/^data:image\/(png|jpg);base64,/, "");
+}
 
 
 
@@ -115,6 +128,7 @@ function getRanNum(){
     return x;
     }
 
+   
 
 
 
