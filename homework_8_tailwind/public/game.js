@@ -16,7 +16,9 @@ class Caption {
 
 function gameStart() {
     // document.getElementById('imageToDisplay').src = "https://source.unsplash.com/collection/466697/${getRanNum()}";
-    document.getElementById('imageToDisplay').src = "https://source.unsplash.com/collection/778914/" + getRanNum();
+     document.getElementById('imageToDisplay').src = "https://source.unsplash.com/collection/778914/" + getRanNum();
+    // var imgUrl = "https://source.unsplash.com/collection/778914/" + getRanNum();
+    // document.getElementById('imageToDisplay').src = imgUrl;
 }
 
 // triggers the local storage function
@@ -78,7 +80,7 @@ function addCaption() {
 
 document.getElementById('timer').innerHTML =
   //sets timer amount
-   00 + ":" +20;
+   00 + ":" +30;
   //auto -starts timer
 startTimer();
 

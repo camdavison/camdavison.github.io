@@ -7,7 +7,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;600;700;800;900&display=swap" rel="stylesheet">
 </head>
-<body class="bg-black">
+<body class="bg-black py-12">
     <div> <!--content wrapper-->
         <div class="mr-8 ml-8"> <!--start nav-->
             <nav>
@@ -26,27 +26,27 @@
             </nav>
         </div><!--end nav-->
 
-        <main class="mr-8 ml-8 md:mr-20 md:ml-20">
+        <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div id="logo" class="">
                 <a href="game-active.html">
                     <img src="img/Logo.svg" alt="creative cap logo" href="game-active.html" class="w-16 h-16 md:w-24 md:h-24">
                 </a>
             </div>
-            <div class="md:flex">   
-                <div class="md:flex-none">
-                    <h1 class="text-4xl text-primary-100 mt-8 mb-8 font-main font-bold md:text-5xl md:mt-20" id="header">
+            <div class="space-y-10 md:space-y-0 md:grid md:grid-cols-2 md:gap-x-8 md:gap-y-10">   
+                <div class>
+                    <h1 class="text-4xl text-primary-100 mt-8 mb-8 font-main font-bold md:text-5xl " id="header">
                         Creative Cap
                     </h1>   
                 </div>
-                <div style="width: 320px" class="  mb-8 w-auto md:flex-none md:ml-52 md:mt-20">
-                    <p class="text-primary-200 text-lg font-light">Test your creative writing by completing as many captions as you can in 2 minutes. The more unique the better!</p>
+                <div style="width: 320px" class="  mb-8 w-auto md:flex-none md:mt-20">
+                    <p class="text-primary-200 text-lg font-light mt-8 mb-8">Test your creative writing by completing as many captions as you can in 2 minutes. The more unique the better!</p>
                 </div>
             </div>
-            <div class="md:flex">
+            <div class="space-y-10 md:space-y-0 md:grid md:grid-cols-2 md:gap-x-8 md:gap-y-10">
                 <div id="game-square" style="width: 320px"class=" mb-8 h-72 w-72 bg-gray-900 border-t-2 border-primary-300 md:flex-none">
                 </div>
-                <div class="md:ml-48 md:flex-none" style="width: 320px;">
-                    <a class="  " href="game-active.html"><button class="w-full h-20 text-white  bg-gray-900 border-t-2 border-primary-300" id="playBtn" href="game-active.html" onclick="gameStart()">PLAY</button></a>
+                <div class=" md:flex-none" style="width: 320px;">
+                    <a class="  " href="game-active.html"><button class="w-full h-20 mt-4 text-white  bg-gray-900 border-t-2 border-primary-300 md:mt-20" id="playBtn" href="game-active.html" onclick="gameStart()">PLAY</button></a>
                 </div>
             </div>
         </main>
