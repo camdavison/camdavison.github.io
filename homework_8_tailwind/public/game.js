@@ -16,7 +16,8 @@ class Caption {
 
 function gameStart() {
     
-     document.getElementById('imageToDisplay').src = "https://picsum.photos/id/"+getRanNum()+"/500/500  ";
+     document.getElementById('imageToDisplay').src = "https://picsum.photos/id/"+getRanNum()+"/320/288/";
+    autoFocus();
     
 }
 
@@ -94,10 +95,17 @@ function startTimer() {
   setTimeout(startTimer, 1000);
   if(m<0){
     document.getElementById('timer').innerHTML = 000 +":" +00;
-    gameOver()
+        if(gameArr.length <= 0){
+        location.reload();
+        } else{
+            gameOver()
+        }           
+    
+        }
     }
-}
+
 // Adding a zero beofre the second if it's less than 10!!!!
+
 function checkSecond(sec) {
   if (sec < 10 && sec >= 0) {sec = "0" + sec}; 
   if (sec < 0) {sec = "59"};
@@ -111,6 +119,10 @@ function getRanNum(){
     return x;
     }
 
+
+function autoFocus() {
+        document.getElementById("captionTxt").focus();
+   }
 
 
 

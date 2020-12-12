@@ -7,8 +7,11 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;600;700;800;900&display=swap" rel="stylesheet">
 </head>
-<body class="bg-black" onload="capLoad()">
-    <main class=" max-w-7xl mx-auto   px-4 sm:px-6 lg:px-8">
+<body class="bg-black py-8" onload="capLoad()">
+<!--MAIN CONTENT WRAPPER-->
+    <main class="max-w-6xl md:mx-auto   px-6 sm:px-6 lg:px-8">
+
+<!--NAV START-->
         <div id="nav" class="hidden sm:flex sm:mb-16 sm:ml-2 sm:space-x-20">
             <div id="Play">
                 <a href="game-active.html">    
@@ -40,21 +43,36 @@
                 </div>
             </div>
         </div>
-            <div>   
-                <div class="md:flex-none">
-                    <h1 class="text-4xl text-primary-100 mt-10 mb-8 font-main font-bold md:text-5xl md:mt-20" id="header">
-                        Creative Cap
-                    </h1>   
-                </div>
-                <div style="width: 320px" class="  mb-8 w-auto md:flex-none  md:mt-20">
-                    <p class="text-primary-200 text-2xl font-light">Check out your amazing work! </p>
-                </div>
+<!--NAV OVER-->
+
+        <div class="space-y-10 md:space-y-0 md:grid md:grid-cols-2 md:gap-x-8 md:gap-y-10">   
+            <div class="md:flex-none ">
+                <h1 class="text-4xl text-primary-100 mt-10 mb-8 font-main font-bold md:text-5xl md:mt-20" id="header">
+                    Creative Cap
+                </h1>   
             </div>
-           <div id="caption-conatiner">
-                 
-            </div> 
-        </main>
-    </div>
+<!--PRIMARY BUTTON -- HIDDEN IN MOBILE VIEW-->
+            <div class=" hidden md:block md:flex-none" style="width: 320px;">
+                <a class="  " href="game-active.html"><button class="w-full h-20 mt-4 text-white  bg-gray-900 border-t-4 border-primary-300 md:mt-20" id="playBtn" href="game-active.html" onclick="gameStart()">PLAY AGAIN</button></a>
+            </div>
+        </div>
+<!--SUB HEAD-->
+        <div style="width: 320px" class="  mb-8 w-auto md:flex-none  md:mt-20">
+            <p class="text-primary-200 text-2xl font-light">Check out your amazing work! </p>
+        </div>
+        <div id="caption-conatiner" class="space-y-10 md:space-y-0 md:grid md:grid-cols-2 md:gap-x-8 md:gap-y-10">
+<!--DYNAMIC CONTENT GOES HERE-->
+         </div>
+        
+<!--LOWER BUTTON MOBILE ONLY-->
+        <div class="  md:hidden md:flex-none" style="width: 320px;">
+            <a class="  " href="game-active.html"><button class="w-full h-20 mt-4 text-white  bg-gray-900 border-t-4 border-primary-300 md:mt-20" id="playBtn" href="game-active.html" onclick="gameStart()">PLAY AGAIN</button></a>
+        </div>
+    </main>
     <script type="text/javascript" src="captionDisplay.js"></script>
 </body>
 </html>
+
+
+
+
