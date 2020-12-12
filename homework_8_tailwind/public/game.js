@@ -15,10 +15,9 @@ class Caption {
 // Starts game by generating a random image
 
 function gameStart() {
-    // document.getElementById('imageToDisplay').src = "https://source.unsplash.com/collection/466697/${getRanNum()}";document.getElementById('imageToDisplay').src = "https://source.unsplash.com/collection/778914/" + getRanNum();
-     document.getElementById('imageToDisplay').src = "https://picsum.photos/id/"+getRanNum()+"/200/300";
-    // var imgUrl = "https://source.unsplash.com/collection/778914/" + getRanNum();
-    // document.getElementById('imageToDisplay').src = imgUrl;
+    
+     document.getElementById('imageToDisplay').src = "https://picsum.photos/id/"+getRanNum()+"/500/500  ";
+    
 }
 
 // triggers the local storage function
@@ -72,22 +71,6 @@ function addCaption() {
     
   }
 
-  
-  function getBase64Image(img) {
-    var canvas = document.createElement("canvas");
-    canvas.width = img.width;
-    canvas.height = img.height;
-
-    var ctx = canvas.getContext("2d");
-    ctx.drawImage(img, 0, 0);
-
-    var dataURL = canvas.toDataURL("image/png");
-
-    return dataURL.replace(/^data:image\/(png|jpg);base64,/, "");
-}
-
-
-
 
 // Timer
 
@@ -123,12 +106,10 @@ function checkSecond(sec) {
 
 // Generates random number to append to the image collection URL to generate random image
 function getRanNum(){
-    var x = Math.floor(Math.random() * 99);
+    var x = Math.floor(Math.random() *  (1084 - 1) + 1);
     console.log(x);
     return x;
     }
-
-   
 
 
 

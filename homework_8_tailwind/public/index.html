@@ -7,49 +7,56 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;600;700;800;900&display=swap" rel="stylesheet">
 </head>
-<body class="bg-black py-12">
-    <div> <!--content wrapper-->
-        <div class="mr-8 ml-8"> <!--start nav-->
-            <nav>
-                <ul>
-                    <li>
-                        <a href="index.html">
-                            <span  class="text-primary-200">About</span>
+<body class="bg-black py-8">
+        <main class=" max-w-7xl mx-auto   px-4 sm:px-6 lg:px-8">
+            <div id="nav" class="hidden sm:flex sm:mb-16 sm:ml-2 sm:space-x-20">
+                <div id="Play">
+                    <a href="game-active.html">    
+                        <span class="text-primary-200 text-xl font-light ">Play</span>
+                    </a>
+                </div>
+                <div id="About">
+                    <a href="about.html">
+                        <span  class="text-primary-200 text-xl font-light">About</span>
+                    </a>
+                </div>
+            </div>      
+            <div id="logo-bar" class="flex justify-between items-center">
+                <div id="logo">
+                    <a href="index.html">
+                        <img src="img/Logo.svg" alt="creative cap logo" href="game-active.html" class="w-12 h-12 md:w-24 md:h-24">
+                    </a>
+                </div>
+                <div id="mob-nav" class="  flex space-x-10 mr-10 sm:hidden">
+                    <div id="mob-play">
+                        <a href="game-active.html">    
+                            <span class="text-primary-200 text-xl font-light ">Play</span>
                         </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <span class="text-primary-200">Play</span>
+                    </div>
+                    <div id="mob-about">
+                        <a href="about.html">
+                            <span  class="text-primary-200 text-xl font-light">About</span>
                         </a>
-                    </li>
-                </ul>
-            </nav>
-        </div><!--end nav-->
-
-        <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div id="logo" class="">
-                <a href="game-active.html">
-                    <img src="img/Logo.svg" alt="creative cap logo" href="game-active.html" class="w-16 h-16 md:w-24 md:h-24">
-                </a>
+                    </div>
+                </div>
             </div>
             <div class="space-y-10 md:space-y-0 md:grid md:grid-cols-2 md:gap-x-8 md:gap-y-10">   
                 <div class>
-                    <h1 class="text-4xl text-primary-100 mt-8 mb-8 font-main font-bold md:text-5xl " id="header">
+                    <h1 class="text-4xl text-primary-100 mt-10 mb-8 font-main font-bold md:text-5xl " id="header">
                         Creative Cap
                     </h1>   
                 </div>
-                <div style="width: 320px" class="  mb-8 w-auto md:flex-none md:mt-20">
+                <div style="width: 320px" class="  mb-8 w-auto mb-8 md:flex-none md:mt-20">
                     <p class="text-primary-200 text-lg font-light mt-8 mb-8">Test your creative writing by completing as many captions as you can in 2 minutes. The more unique the better!</p>
                 </div>
             </div>
             <div class="space-y-10 md:space-y-0 md:grid md:grid-cols-2 md:gap-x-8 md:gap-y-10">
-                <div id="game-square" style="width: 320px"class=" mb-8 h-72 w-72 bg-gray-900 border-t-2 border-primary-300 md:flex-none">
+                <div id="game-square" style="width: 320px"class=" mb-8 h-72 w-72 bg-gray-900 border-t-4 border-primary-300 md:flex-none">
                 </div>
                 <div class=" md:flex-none" style="width: 320px;">
-                    <a class="  " href="game-active.html"><button class="w-full h-20 mt-4 text-white  bg-gray-900 border-t-2 border-primary-300 md:mt-20" id="playBtn" href="game-active.html" onclick="gameStart()">PLAY</button></a>
+                    <a class="  " href="game-active.html"><button class="w-full h-20 mt-4 text-white  bg-gray-900 border-t-4 border-primary-300 md:mt-20" id="playBtn" href="game-active.html" onclick="gameStart()">PLAY</button></a>
                 </div>
             </div>
         </main>
-    </div>
 </body>
 </html>
